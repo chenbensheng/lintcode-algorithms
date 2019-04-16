@@ -3,18 +3,18 @@ class Node :
         self.elem = elem
         self.next = next
 
+#非递归实现：
 def reverse_list(pHead):
     if not pHead or not pHead.next:
         return pHead
 
-    newHead =None
+    newHead = None
     while pHead:
-        temp=pHead.next
-        pHead.next=newHead
-        newHead=pHead
-        pHead=temp
+        temp = pHead.next
+        pHead.next = newHead
+        newHead = pHead
+        pHead = temp
     return newHead
-
 
 def insert_node(phead, elem):
     node = Node(elem)
